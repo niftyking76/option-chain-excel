@@ -33,6 +33,21 @@ body {
     margin: 0 auto;
 }
 
+.hero-section {
+    animation: fadeUp 1s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 
 .btn-primary {
@@ -65,5 +80,6 @@ body {
         font-size: 2.4rem;
     }
 }
+
 
 
