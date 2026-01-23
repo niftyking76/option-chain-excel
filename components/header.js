@@ -16,10 +16,10 @@ class CustomHeader extends HTMLElement {
                                     <a class="nav-link active" href="/">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/products.html">Products</a>
+                                    <a class="nav-link" href="products.html">Products</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/about.html">About</a>
+                                    <a class="nav-link" href="about.html">About</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/contact.html">Contact</a>
@@ -42,5 +42,6 @@ class CustomHeader extends HTMLElement {
         `;
     }
 }
+
 
 customElements.define('custom-header', CustomHeader);
