@@ -3,6 +3,16 @@
     --secondary: #6c757d;
 } */
 
+:root {
+    --primary: #0077cc;
+    --primary-light: #e6f2ff;
+    --secondary: #005fa3;
+    --text: #333333;
+    --light-text: #666666;
+    --white: #ffffff;
+}
+
+
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
@@ -24,6 +34,8 @@ body {
     color: var(--white);
     padding-top: 80px; /* space for navbar */
 }
+
+
 
 .hero-section h1 {
     color: #1f2937;
@@ -96,6 +108,7 @@ body {
         font-size: 2.4rem;
     }
 }
+
 
 
 
