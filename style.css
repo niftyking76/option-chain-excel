@@ -312,6 +312,14 @@ body {
 }
 
 
+.hero-section {
+    position: relative !important;
+    min-height: 100vh !important;
+    background: none !important;
+    overflow: hidden;
+    z-index: 0;   /* ← THIS WAS MISSING */
+}
+
 
 
 
