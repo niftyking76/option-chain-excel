@@ -40,6 +40,12 @@ body {
     animation: fadeUp 1s ease-out;
 }
 
+.hero-section .btn-primary {
+    margin-bottom: 80px;
+}
+
+
+
 /* Text styling */
 
 .hero-section h1 {
@@ -59,19 +65,33 @@ body {
 /* ================= BUTTONS ================= */
 
 .btn-primary {
-    background-color: var(--primary);
-    border-color: var(--primary);
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border: none;
+    color: #ffffff;
+    padding: 14px 36px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
 }
 
-.btn-outline-primary {
-    color: var(--primary);
-    border-color: var(--primary);
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
 }
 
-.btn-outline-primary:hover {
-    background-color: var(--primary);
-    color: white;
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.25);
 }
+
 
 /* ================= SHADOW EFFECT ================= */
 
@@ -89,15 +109,17 @@ body {
 
 .scroll-indicator {
     position: absolute;
-    bottom: 30px;
+    bottom: 40px;            /* push it down */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.75);
     letter-spacing: 1px;
     animation: scrollFade 2s infinite;
+    pointer-events: none;
 }
+
 
 /* If your HTML only has ↓ Scroll text, this improves it */
 .scroll-indicator::after {
@@ -123,6 +145,7 @@ body {
     bottom: 18px;
     transform: translateX(-50%);
     animation: wheelMove 1.5s infinite;
+    top: 14px;
 }
 
 /* ================= ANIMATIONS ================= */
@@ -172,3 +195,4 @@ body {
         font-size: 1rem;
     }
 }
+
