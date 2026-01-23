@@ -13,7 +13,7 @@ class CustomHeader extends HTMLElement {
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="/">Home</a>
+                                    <a class="nav-link active" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="products.html">Products</a>
@@ -22,7 +22,7 @@ class CustomHeader extends HTMLElement {
                                     <a class="nav-link" href="about.html">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/contact.html">Contact</a>
+                                    <a class="nav-link" href="contact.html">Contact</a>
                                 </li>
 <li class="nav-item">
                                     <a class="nav-link" href="https://youtube.com" target="_blank">
@@ -45,3 +45,4 @@ class CustomHeader extends HTMLElement {
 
 
 customElements.define('custom-header', CustomHeader);
+
