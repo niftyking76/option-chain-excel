@@ -1,75 +1,62 @@
+/* ================= ROOT VARIABLES ================= */
+
 :root {
-    --primary: #0d6efd;
+    --primary: #2563eb;
+    --primary-light: #dbeafe;
     --secondary: #6c757d;
+    --white: #ffffff;
+    --text-dark: #1f2937;
+    --text-muted: #e5e7eb;
 }
 
-
-
+/* ================= GLOBAL ================= */
 
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     color: #212529;
-} */
+    margin: 0;
+}
 
-/* .hero-section {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-} */
+/* ================= HERO SECTION ================= */
 
-.hero-section { */
+.hero-section {
     min-height: 100vh;
-    background: linear-gradient(135deg, #dbeafe, #fce7f3);
-    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    background: linear-gradient(
+        135deg,
+        #dbeafe 0%,
+        #93c5fd 35%,
+        #3b82f6 70%,
+        #2563eb 100%
+    );
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 80px;
     color: var(--white);
-    padding-top: 80px; /* space for navbar */
-} 
+    position: relative;
+    overflow: hidden;
+    animation: fadeUp 1s ease-out;
+}
 
-
+/* Text styling */
 
 .hero-section h1 {
-    color: #1f2937;
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    font-size: 3.5rem;
 }
 
 .hero-section p {
-    color: #374151;
+    color: var(--text-muted);
     max-width: 700px;
     margin: 0 auto;
+    font-size: 1.15rem;
 }
 
-.hero-section {
-    animation: fadeUp 1s ease-out;
-} 
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-.scroll-indicator {
-    margin-top: 40px;
-    font-size: 14px;
-    color: #6b7280;
-    animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(8px); }
-} 
-
-
-
+/* ================= BUTTONS ================= */
 
 .btn-primary {
     background-color: var(--primary);
@@ -86,46 +73,102 @@ body {
     color: white;
 }
 
+/* ================= SHADOW EFFECT ================= */
+
 .shadow {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease;
 }
 
 .shadow:hover {
-    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15) !important;
-    transition: all 0.3s ease;
-} */
+    box-shadow: 0 1.2rem 2.5rem rgba(0, 0, 0, 0.25) !important;
+}
 
-/* Responsive adjustments */
+/* ================= SCROLL INDICATOR ================= */
+/* Uses your existing .scroll-indicator class */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 1px;
+    animation: scrollFade 2s infinite;
+}
+
+/* If your HTML only has ↓ Scroll text, this improves it */
+.scroll-indicator::after {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 36px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 14px;
+    margin: 8px auto 0;
+    position: relative;
+}
+
+/* Animated wheel */
+.scroll-indicator::before {
+    content: "";
+    width: 4px;
+    height: 8px;
+    background: white;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    animation: wheelMove 1.5s infinite;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes wheelMove {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0);
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 12px);
+    }
+}
+
+@keyframes scrollFade {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 768px) {
     .hero-section h1 {
         font-size: 2.4rem;
     }
-} 
 
-
-
-
-/* ================= ROOT VARIABLES ================= */
-
-/* :root {
-    --primary: #2563eb;
-    --primary-light: #dbeafe;
-    --secondary: #6c757d;
-    --white: #ffffff;
-    --text-dark: #1f2937;
-    --text-muted: #e5e7eb;
+    .hero-section p {
+        font-size: 1rem;
+    }
 }
-
-/* ================= GLOBAL =================
-
-
-
-
-
-
-
-
-
-
-
-
