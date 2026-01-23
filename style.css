@@ -1,16 +1,16 @@
-/* :root {
+:root {
     --primary: #0d6efd;
     --secondary: #6c757d;
-} */
+}
 
-:root {
+/* :root {
     --primary: #0077cc;
     --primary-light: #e6f2ff;
     --secondary: #005fa3;
     --text: #333333;
     --light-text: #666666;
     --white: #ffffff;
-}
+} */
 
 
 body {
@@ -108,6 +108,7 @@ body {
         font-size: 2.4rem;
     }
 }
+
 
 
 
