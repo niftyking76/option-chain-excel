@@ -11,10 +11,10 @@ class CustomFooter extends HTMLElement {
                         <div class="col-lg-4 mb-4 mb-lg-0">
                             <h5 class="text-uppercase mb-4">Quick Links</h5>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><a href="/" class="text-white-50">Home</a></li>
-                                <li class="mb-2"><a href="/products.html" class="text-white-50">Products</a></li>
-                                <li class="mb-2"><a href="/about.html" class="text-white-50">About Us</a></li>
-                                <li class="mb-2"><a href="/contact.html" class="text-white-50">Contact</a></li>
+                                <li class="mb-2"><a href="index.html" class="text-white-50">Home</a></li>
+                                <li class="mb-2"><a href="products.html" class="text-white-50">Products</a></li>
+                                <li class="mb-2"><a href="about.html" class="text-white-50">About Us</a></li>
+                                <li class="mb-2"><a href="contact.html" class="text-white-50">Contact</a></li>
 </ul>
                         </div>
                         <div class="col-lg-4">
@@ -36,5 +36,6 @@ class CustomFooter extends HTMLElement {
         `;
     }
 }
+
 
 customElements.define('custom-footer', CustomFooter);
