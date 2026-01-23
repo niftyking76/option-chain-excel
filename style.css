@@ -281,6 +281,36 @@ body {
 }
 
 
+/* ================= FORCE HERO BACKGROUND FIX ================= */
+
+.hero-section {
+    position: relative !important;
+    min-height: 100vh !important;
+    background: none !important;
+    overflow: hidden;
+}
+
+/* Gradient layer (cannot be overridden) */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        #dbeafe 0%,
+        #93c5fd 35%,
+        #3b82f6 70%,
+        #2563eb 100%
+    );
+    z-index: -1;
+}
+
+/* Make sure all hero content stays above gradient */
+.hero-section * {
+    position: relative;
+    z-index: 1;
+}
+
 
 
 
