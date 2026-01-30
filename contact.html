@@ -25,40 +25,20 @@
                     <h1 class="display-5 fw-bold mb-4">Contact Us</h1>
                     <p class="lead mb-5">Have questions? We're here to help!</p>
 
-                    <form id="contactForm">
-
-                        <div class="mb-3">
-                            <label class="form-label">Your Name</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                name="entry.1404627152"
-                                required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Email Address</label>
-                            <input
-                                type="email"
-                                class="form-control"
-                                name="entry.1968238649"
-                                required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Message</label>
-                            <textarea
-                                class="form-control"
-                                name="entry.1982734634"
-                                rows="5"
-                                required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary px-4">
-                            Send Message
-                        </button>
-
+                    <form id="contactForm"
+                      action="https://docs.google.com/forms/d/e/1FAIpQLSeT4Sopg6xbwkvhhJEqFIN1vnFoygdKbgVlos9aOM3SFEW5Q/formResponse"
+                      method="POST"
+                      target="hidden_iframe">
+                
+                      <input type="text" name="entry.1404627152" required>
+                      <input type="email" name="entry.1968238649" required>
+                      <textarea name="entry.1982734634" required></textarea>
+                    
+                      <button type="submit">Send</button>
                     </form>
+                    
+                    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
                 </div>
 
                 <!-- CONTACT INFO -->
@@ -119,24 +99,16 @@
     <script src="components/footer.js"></script>
 
     <!-- GOOGLE FORM SUBMIT SCRIPT -->
+
     <script>
-    document.getElementById("contactForm").addEventListener("submit", function (e) {
-        e.preventDefault();
+document.getElementById("contactForm").addEventListener("submit", function () {
+    setTimeout(() => {
+        window.location.href = "thankyou.html";
+    }, 500);
+});
+</script>
 
-        const formData = new FormData(this);
-
-        fetch(
-            "https://docs.google.com/forms/d/e/1FAIpQLSeT4Sopg6xbwkvhhJEqFIN1vnFoygdKbgVlos9aOM3SFEW5Q/formResponse",
-            {
-                method: "POST",
-                body: formData,
-                mode: "no-cors"
-            }
-        ).then(() => {
-            window.location.href = "/thankyou.html";
-        });
-    });
-    </script>
 
 </body>
 </html>
+
