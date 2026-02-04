@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIFTY 50 Option Chain | TradePulse Hub</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<custom-header></custom-header>
+
+<main class="py-5">
+<div class="container">
+
+<!-- ================= PRODUCT SECTION ================= -->
+<div class="row align-items-center">
+
+<!-- Image Slider -->
+<div class="col-lg-6 mb-4">
+    <div id="productCarousel" class="carousel slide shadow rounded-3 overflow-hidden" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/products/option-chain-1.webp" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/products/option-chain-2.webp" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/products/option-chain-3.webp" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/products/option-chain-4.webp" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/products/option-chain-5.webp" class="d-block w-100" alt="">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<!-- Product Info -->
+<div class="col-lg-6">
+
+<h1 class="mb-3">NIFTY 50 Option Chain – Google Sheet</h1>
+
+<p class="lead">
+Live NIFTY 50 option chain in Google Sheets with real-time updates,
+OI analysis, PCR calculation, and color-coded signals for options traders.
+</p>
+
+<!-- PRICE CARD -->
+<div class="card border-success mb-4">
+<div class="card-body">
+
+<h4 class="mb-2">
+    <del class="text-muted">₹799</del>
+    <span class="text-success ms-2">FREE</span>
+</h4>
+
+<p class="text-muted mb-3">
+Unlocked using promo code shared on YouTube
+</p>
+
+<div class="d-flex flex-wrap gap-3">
+
+    <!-- FREE -->
+    <button class="btn btn-success btn-lg"
+            data-bs-toggle="modal"
+            data-bs-target="#promoModal">
+        Get Free Access
+    </button>
+
+    <!-- PAID -->
+    <button class="btn btn-outline-primary btn-lg"
+            data-bs-toggle="collapse"
+            data-bs-target="#razorpayBox">
+        Buy Now ₹799
+    </button>
+
+</div>
+</div>
+</div>
+
+<!-- Razorpay -->
+<div id="razorpayBox" class="collapse mt-3">
+<div class="card card-body border-primary">
+    <form>
+        <script
+            src="https://checkout.razorpay.com/v1/payment-button.js"
+            data-payment_button_id="pl_S705ueT8WoiuSs"
+            async>
+        </script>
+    </form>
+</div>
+</div>
+
+<!-- FEATURES -->
+<h3 class="mt-4 mb-3">Features</h3>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Live NIFTY 50 option chain auto refresh</li>
+    <li class="list-group-item">Open Interest & Change in OI analysis</li>
+    <li class="list-group-item">PCR (Put-Call Ratio) calculation</li>
+    <li class="list-group-item">Support & Resistance detection</li>
+    <li class="list-group-item">Bullish / Bearish color signals</li>
+    <li class="list-group-item">Works directly in Google Sheets</li>
+</ul>
+
+</div>
+</div>
+
+<!-- ================= HOW IT WORKS ================= -->
+<div class="row mt-5">
+<div class="col-lg-8 mx-auto">
+
+<h2 class="mb-4">How It Works</h2>
+<ol class="mb-5">
+    <li>Open the Google Sheet using access link</li>
+    <li>Make a copy to your Google Drive</li>
+    <li>Allow data permissions once</li>
+    <li>Live option chain loads automatically</li>
+</ol>
+
+<div class="card bg-light p-4">
+<h4 class="mb-3">System Requirements</h4>
+<ul class="mb-0">
+    <li>Google Account</li>
+    <li>Desktop or Laptop</li>
+    <li>Stable Internet Connection</li>
+    <li>Basic options knowledge</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+</div>
+</main>
+
+<custom-footer></custom-footer>
+
+<!-- ================= PROMO MODAL ================= -->
+<div class="modal fade" id="promoModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+
+<div class="modal-header">
+    <h5 class="modal-title">Unlock Free Access 🎁</h5>
+    <button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+    <p class="text-muted">
+        Enter the promo code to unlock this <strong>₹799 premium tool</strong>.
+    </p>
+
+    <input type="text" id="promoCode" class="form-control mb-2" placeholder="Promo code">
+    <div id="promoMsg" class="small"></div>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-success w-100" onclick="unlockFree()">
+        Unlock Now
+    </button>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- ================= JS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="components/header.js"></script>
+<script src="components/footer.js"></script>
+
+<script>
+function unlockFree() {
+    const code = document.getElementById("promoCode").value.trim().toUpperCase();
+    const msg = document.getElementById("promoMsg");
+
+    if (code === "YOUTUBEFREE") {
+        msg.innerHTML = "<span class='text-success'>Access unlocked! Redirecting...</span>";
+        setTimeout(() => {
+            window.open(
+              "https://docs.google.com/spreadsheets/d/1MhecuMs7FgW7qkfgbDE3_KI7kfAKKKOlzMdBDasOJiY/edit#gid=165256704",
+              "_blank"
+            );
+        }, 800);
+    } else {
+        msg.innerHTML = "<span class='text-danger'>Invalid promo code</span>";
+    }
+}
+</script>
+
+<style>
+.carousel img {
+    height: 360px;
+    object-fit: cover;
+}
+</style>
+
+</body>
+</html>
